@@ -8,11 +8,26 @@ import SelectSlidePane from './SelectSlidePane';
 class Project extends Component {
   state = {
     options: [
-      { value: 'First', label: 1 },
-      { value: 'Second', label: 2 },
-      { value: 'Third', label: 3 },
-      { value: 'Fourth', label: 4 },
-      { value: 'Fifth', label: 5 }
+      { value: 'One', label: 1 },
+      { value: 'Two', label: 2 },
+      { value: 'Three', label: 3 },
+      { value: 'Four', label: 4 },
+      { value: 'Five', label: 5 },
+      { value: 'Six', label: 6 },
+      { value: 'Seven', label: 7 },
+      { value: 'Eight', label: 8 },
+      { value: 'Nine', label: 9 },
+      { value: 'Ten', label: 10 },
+      { value: 'Eleven', label: 11 },
+      { value: 'Twelve', label: 12 },
+      { value: 'Thirteen', label: 13 },
+      { value: 'Fourteen', label: 14 },
+      { value: 'Fifteen', label: 15 },
+      { value: 'Sixteen', label: 16 },
+      { value: 'Seventeen', label: 17 },
+      { value: 'Eighteen', label: 18 },
+      { value: 'Nineteen', label: 19 },
+      { value: 'Twenty', label: 20 }
     ],
     frames: null,
     history: []

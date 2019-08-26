@@ -23,8 +23,8 @@ class CarouselRender extends Component {
           frames.map(frame => {
             return (
               <div className="blue" key={frame.label}>
-                <h3 className="legend">{frame.label}</h3>
-                <p>This is your 1st panel</p>
+                <h3 className="legend">{frame.value}</h3>
+                <p>This is your {frame.label} panel</p>
               </div>
             )
           })
