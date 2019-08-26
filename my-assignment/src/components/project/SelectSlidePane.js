@@ -12,7 +12,6 @@ class SelectSlidePane extends Component {
       <Select
         name='selectSlides'
         placeholder='Select number of carousel slides'
-        defaultValue={{ value: 'First', label: 1 }}
         className="basic-single"
         options={this.props.options}
         onChange={this.handleChange}

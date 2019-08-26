@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import { Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { Modal, Button } from 'react-materialize';
 import CarouselPane from './CarouselPane';
 import SelectSlidePane from './SelectSlidePane';
@@ -22,6 +22,8 @@ class Project extends Component {
     const framesPanels = this.state.options.map(option => {
       if (option.label <= frames.label) {
         return option;
+      } else {
+        return undefined;
       }
     })
 
@@ -37,8 +39,9 @@ class Project extends Component {
   }
 
   render() {
-    // const { auth } = this.props;
-    // if (auth.auth.authError === 'new' || auth.auth.authError === 'Login failed') return <Redirect to='/' />
+    const { auth } = this.props;
+    if (auth.auth.authError === 'new' || auth.auth.authError === 'Login failed') return <Redirect to='/' />
+
     const trigger = <Button className="center">Open Modal</Button>;
 
     return (
@@ -48,7 +51,7 @@ class Project extends Component {
         <Modal header="Carousel Log" trigger={trigger}>
           {
             this.state.history.length ? this.state.history.map((history) =>
-              (<span> {history} ,</span>)) : <span>No history to display!</span>
+              (<span key={history}> {history} ,</span>)) : <span>No history to display!</span>
           }
         </Modal>
       </div>
